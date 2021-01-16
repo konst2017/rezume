@@ -1,0 +1,19 @@
+- @links = ['Blog','About','Contact']
+- @nested = ['Tops','Bottoms','Shoes','Accessories','Sale']
+
+%main{:ontouchstart => true}
+	%nav
+		%input{:id => "link-top", :type => "checkbox"}
+		%label.down{:for => "link-top"}
+			%h2 Menu
+		%ul
+			%li
+				%input{:id => "link-shop", :type => "checkbox"}
+				%label.right{:for => "link-shop"} Shop
+				%ul
+					- @nested.each do |nested|
+						%li
+							%a #{nested}
+			- @links.each do |links|
+				%li
+					%a #{links}

@@ -1,0 +1,9 @@
+Options +FollowSymLinks
+  AddDefaultCharset UTF-8
+IndexIgnore */*
+RewriteEngine on
+
+RewriteRule ^img/(.*)$ /web/img/$1 [L]
+
+
+RewriteRule (.*) frontend/web/$1
